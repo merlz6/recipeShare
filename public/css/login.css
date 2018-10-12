@@ -1,0 +1,40 @@
+body{
+  text-align: center;
+}
+
+header {
+  height:100px;
+  text-align: left;
+}
+h1 {
+  margin: 20px;
+  font-family: cursive;
+
+}
+
+.container {
+  border: 1.5px solid grey;
+  margin:0 auto;
+  justify-content: space-between;
+  width:500px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvygyi2EuGEsj5DLkkaT2BFSaYPsGy91aP4omuMxpkz1GlsTI');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:340px;
+  
+}
+
+h3 {
+  margin:25px 0;
+}
+
+a {
+  margin: 50px 0;
+  height:40px;
+  width:120px;
+}
+
+html {
+  background: url('https://images-na.ssl-images-amazon.com/images/I/51F%2B1qLa4%2BL.jpg');
+  background-size:cover;
+}

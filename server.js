@@ -3,9 +3,11 @@
 //___________________
 const express = require('express');
 const methodOverride  = require('method-override');
-const mongoose = require ('mongoose');
+const mongoose = require('mongoose')
+require('dotenv').config()
 const app = express ();
 const db = mongoose.connection;
+const session = require('express-session')
 //___________________
 //Port
 //___________________
@@ -40,6 +42,22 @@ app.use(express.json());// returns middleware that only parses JSON
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: false
+}))
+
+
+const userController = require('./controllers/users.js')
+app.use('/users', userController)
+
+const sessionsController = require('./controllers/sessions.js')
+app.use('/sessions', sessionsController)
+
+
+
+
 //___________________
 // Routes
 //___________________
@@ -47,6 +65,19 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 app.get('/' , (req, res) => {
   res.render('login.ejs');
 });
+
+
+app.get('/app', (req, res)=>{
+  if(req.session.currentUser){
+    res.send('BLOG PAGE')
+  } else {
+    res.redirect('/sessions/new')
+  }
+
+})
+
+
+
 
 //___________________
 //Listener
