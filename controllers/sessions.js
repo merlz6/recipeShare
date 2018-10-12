@@ -13,7 +13,7 @@ sessions.post('/', (req, res)=>{
       console.log(req.body.password, foundUser.password)
         if(bcrypt.compareSync(req.body.password, foundUser.password)){
           req.session.currentUser = foundUser
-            res.send('logged in')
+            res.render('index.ejs')
         } else {
           res.send('<a href="/">wrong password</a>')
         }
