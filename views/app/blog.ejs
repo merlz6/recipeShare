@@ -8,9 +8,31 @@
     <h1>Welcome to the RecipeShare</h1>
 
     <div class='container'>
-      <a href='sessions/recipeNew'>Add a recipe</a>
-    </div>
 
+
+    <%  for(let i = 0; i < Messages.length; i++){ %>
+        <div>
+          <h4>Dish Name: <%=Messages[i].name %></h4> </br>
+          <p><strong>Ingredients: </strong><%=Messages[i].ingredients %></p> </br>
+          <p><strong>Directions: </strong><%=Messages[i].directions %></p>
+        </div>
+    <%  } %>
+
+
+
+
+
+
+
+
+
+              <a href='sessions/recipeNew'>Add a recipe</a>
+
+
+
+
+
+    </div>
 
   </body>
 </html

@@ -4,6 +4,31 @@ const sessions = express.Router()
 const User = require('../models/users.js');
 const Message = require('../models/messages.js');
 
+
+
+
+sessions.post('/', (req, res)=>{
+  Message.create(req.body, (err, createdMessage) => {
+      })
+      Message.find({}, (error, allMessages) => {
+    res.render('./app/blog.ejs', {
+      Messages: allMessages
+    })
+
+})
+});
+
+
+sessions.get('/', (req, res) => {
+  Message.find({}, (error, allMessages) => {
+    res.render('./app/blog.ejs', {
+      allMessages: allMessages
+    })
+  })
+
+})
+
+
 sessions.get('/new', (req, res) => {
   res.render('sessions/new.ejs')
 })
@@ -13,14 +38,8 @@ sessions.get('/recipeNew', (req, res) => {
 })
 
 
-sessions.post('/', (req, res)=>{
-  Message.create(req.body, (err, createdMessage) => {
-      })
-    res.render('./app/blog.ejs', {
-      messages: Message
-    })
 
-});
+
 
 
 sessions.post('/', (req, res)=>{
