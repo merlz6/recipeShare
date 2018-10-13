@@ -61,9 +61,11 @@ app.use('/sessions', sessionsController)
 //___________________
 // Routes
 //___________________
-//localhost:3000  - this will reroute to `products`
+
 app.get('/' , (req, res) => {
-  res.render('login.ejs');
+  res.render('login.ejs', {
+    currentUser: req.session.currentUser
+});
 });
 
 
