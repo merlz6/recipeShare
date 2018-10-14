@@ -14,8 +14,6 @@ user.post('/', (req, res) => {
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
   console.log('before bcrypt: ' + req.body.password )
   User.create(req.body, (err, createdUser) => {
-
-
     if (err) {
       console.log(err)
     }
@@ -24,7 +22,11 @@ user.post('/', (req, res) => {
   })
 })
 
-
+user.delete('/:id', (req, res) => {
+    Message.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/sessions');
+    });
+});
 
 
 

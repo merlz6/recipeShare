@@ -20,9 +20,9 @@ sessions.post('/', (req, res)=>{
 
 
 sessions.get('/', (req, res) => {
-  Message.find({}, (error, allMessages) => {
+  Message.find({}, (error, Messages) => {
     res.render('./app/blog.ejs', {
-      allMessages: allMessages
+      Messages: Messages
     })
   })
 
@@ -51,6 +51,12 @@ sessions.post('/', (req, res)=>{
         } else {
           res.send('<a href="/">wrong password</a>')
         }
+    });
+});
+
+sessions.delete('/:id', (req, res) => {
+    Message.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/sessions');
     });
 });
 
