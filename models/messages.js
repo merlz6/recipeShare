@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const messagesSchema = Schema({
   name:String,
+  image:String,
   ingredients:[String],
   directions:String
 })

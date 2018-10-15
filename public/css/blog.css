@@ -73,6 +73,13 @@ color:#D80032;
   margin: 0 25px;
 }
 
+.innerbox img {
+  height: 150px;
+  width:150px;
+}
+
+
+
 a {
   color: #D80032;
   text-decoration: underline;
