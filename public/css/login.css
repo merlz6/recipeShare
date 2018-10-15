@@ -1,5 +1,6 @@
 body{
   text-align: center;
+
 }
 
 header {
@@ -16,12 +17,14 @@ h1 {
   border: 1.5px solid grey;
   margin:0 auto;
   justify-content: space-between;
-  width:500px;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvygyi2EuGEsj5DLkkaT2BFSaYPsGy91aP4omuMxpkz1GlsTI');
+  width:800px;
+  height:600px;
+  background-image: url('https://cbspittsburgh.files.wordpress.com/2015/11/recipes-1024x576.jpg?w=1024&h=576&crop=1');
   background-repeat: no-repeat;
   background-size: cover;
-  height:340px;
-  
+  background-position: center;
+
+
 }
 
 h3 {
@@ -29,9 +32,10 @@ h3 {
 }
 
 a {
-  margin: 50px 0;
-  height:40px;
-  width:120px;
+  margin: 140px 0;
+  height:50px;
+  width:150px;
+
 }
 
 html {
