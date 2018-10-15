@@ -1,0 +1,51 @@
+body{
+  text-align: center;
+
+}
+
+header {
+  height:100px;
+  text-align: left;
+}
+h1 {
+  margin: 20px;
+  font-family: cursive;
+
+}
+
+.container {
+  border: 1.5px solid grey;
+  margin:auto;
+  margin-top: 100px;
+  justify-content: space-between;
+  width:800px;
+  height:600px;
+  background-image: url('https://cbspittsburgh.files.wordpress.com/2015/11/recipes-1024x576.jpg?w=1024&h=576&crop=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+
+}
+
+h3 {
+  margin:25px 0;
+}
+
+a {
+  margin: 140px 0;
+  height:70px;
+  width:200px;
+
+
+}
+
+
+.btn {
+    font-size:18px;
+}
+
+html {
+  background: url('https://images-na.ssl-images-amazon.com/images/I/51F%2B1qLa4%2BL.jpg');
+  background-size:cover;
+}

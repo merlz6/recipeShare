@@ -3,32 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>RecipeSharer</title>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Playball" rel="stylesheet">
+    <link rel='stylesheet' href='/css/login.css' />
   </head>
     <body>
+      <h1>Log In</h1>
       <div class="container">
-        <h1>Log In</h1>
+
         <div class="row">
-          <form class="col s12" action='/sessions' method="POST">
+          <form class="" action='/sessions' method="POST">
             <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="Placeholder" id="username" type="text" class="validate" name="username" required>
-                <label for="username">User Name</label>
+                <h4>UserName</h4>
+                <input placeholder="UserName" id="username" type="textbox" class="validate" name="username" required>
+
               </div>
             </div>
             <div class="row">
-              <div class="input-field col s12">
+              <div class="">
+                <h4>Password</h4>
                 <input id="password" type="password" class="validate" name="password" required>
-                <label for="password">Password</label>
               </div>
             </div>
             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-              <i class="material-icons right">send</i>
             </button>
           </form>
         </div>
