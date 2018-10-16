@@ -21,7 +21,7 @@ ul {
 
 img {
   margin-top:15px;
-  width:350px;
+  width:380px;
   height:350px;
 }
 
@@ -29,6 +29,7 @@ p {
   padding-top: 10px;
   padding-bottom: 25px;
   font-size: 20px;
+  margin:auto 85px;
 }
 
 h4 {
@@ -37,5 +38,12 @@ h4 {
 }
 
 a {
-  font-size:18px;
+  font-size:26px;
+  margin-bottom: 5px;
+  color:black;
+  text-decoration: underline;
+}
+
+nav  a{
+  color:black;
 }

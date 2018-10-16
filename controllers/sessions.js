@@ -28,6 +28,17 @@ sessions.get('/', (req, res) => {
 
 })
 
+sessions.get('/new', (req, res) => {
+  res.render('sessions/new.ejs')
+})
+
+sessions.get('/recipeNew', (req, res) => {
+  res.render('recipeNew.ejs')
+})
+
+
+
+
 sessions.get('/:id', (req, res) => {
     Message.findById(req.params.id, (err, foundMessage) => {
         res.render('./app/show.ejs', {
@@ -40,13 +51,7 @@ sessions.get('/:id', (req, res) => {
 
 
 
-sessions.get('/new', (req, res) => {
-  res.render('sessions/new.ejs')
-})
 
-sessions.get('/recipeNew', (req, res) => {
-  res.render('recipeNew.ejs')
-})
 
 
 
@@ -64,6 +69,14 @@ sessions.post('/', (req, res)=>{
         }
     });
 });
+
+
+sessions.put('/:id', (req, res) => {
+  Message.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
+        res.redirect('/sessions')
+  })
+
+})
 
 
 sessions.get('/:id/edit', (req, res) => {
@@ -85,12 +98,7 @@ sessions.delete('/:id', (req, res) => {
 });
 
 
-sessions.put('/:id', (req, res) => {
-  Message.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
-        res.redirect('/sessions')
-  })
 
-})
 
 
 
