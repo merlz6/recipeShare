@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ./partials/head.ejs %>
+
+    <link rel='stylesheet' href='/css/edit.css' />
+  </head>
+  <body>
+    <h1>Edit Recipe</h1>
+    <div class='container'>
+      <form action='/sessions/<%=message.id%>?_method=PUT' method="POST">
+        <h5 class='top'>Name</h5></br>
+        <input class='boxs' type='textbox' value='<%=message.name %>'  name='name'/></br>
+        <h5>Image</h5></br>
+         <input class='boxs' type='textbox' value='<%=message.image %>' name='image'/></br>
+        <h5>Ingredients</h5></br>
+         <input class='boxs' type='textbox' value='<%=message.ingredients%>' name='ingredients'/></br>
+        <h5>Directions</h5></br>
+         <input class='boxs' type='textbox' value='<%=message.directions%>' name='description'/></br>
+        <input class='submit' type='submit' value='submit changes' />
+    </div>
+
+    </form>
+
+  </body>
+</html>

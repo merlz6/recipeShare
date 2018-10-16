@@ -65,6 +65,19 @@ sessions.post('/', (req, res)=>{
     });
 });
 
+
+sessions.get('/:id/edit', (req, res) => {
+  Message.findById(req.params.id, (err, foundMessage) => {
+    //db needs to be called before rendering page
+    res.render('edit.ejs', {
+      message: foundMessage
+    })
+  })
+
+})
+
+
+
 sessions.delete('/:id', (req, res) => {
     Message.findByIdAndRemove(req.params.id, (err, data) => {
         res.redirect('/sessions');
@@ -72,7 +85,12 @@ sessions.delete('/:id', (req, res) => {
 });
 
 
+sessions.put('/:id', (req, res) => {
+  Message.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
+        res.redirect('/sessions')
+  })
 
+})
 
 
 
