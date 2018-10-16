@@ -1,0 +1,41 @@
+
+html {
+  text-align: center;
+  background: url('https://images-na.ssl-images-amazon.com/images/I/51F%2B1qLa4%2BL.jpg');
+  background-size:cover;
+  text-align: center;
+  font-family: 'Playball', cursive;
+}
+
+.container {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiqdO6mng5d0wGA1MZDAb-FWhbw6puHf5wtjx_e9UZlwWtVsT8');
+    background-size: cover;
+}
+
+li {
+  font-size: 20px;
+}
+ul {
+  margin:25px 0;
+}
+
+img {
+  margin-top:15px;
+  width:350px;
+  height:350px;
+}
+
+p {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  font-size: 20px;
+}
+
+h4 {
+  margin-top:30px;
+  margin-bottom:20px;
+}
+
+a {
+  font-size:18px;
+}

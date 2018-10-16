@@ -28,6 +28,17 @@ sessions.get('/', (req, res) => {
 
 })
 
+sessions.get('/:id', (req, res) => {
+    Message.findById(req.params.id, (err, foundMessage) => {
+        res.render('./app/show.ejs', {
+            message: foundMessage
+        });
+    })
+});
+
+
+
+
 
 sessions.get('/new', (req, res) => {
   res.render('sessions/new.ejs')
