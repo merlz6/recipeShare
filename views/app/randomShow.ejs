@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+  <% include ../partials/head.ejs %>
+        <link rel='stylesheet' href='/css/show.css' />
+    </head>
+    <body>
+      <% let i = Math.floor(Math.random() * Math.floor(Messages.length)) %>
+      <h1><%=Messages[i].name%></h1>
+
+      <div class='container'>
+          <img src='<%=Messages[i].image%>'>
+
+
+        <h4>Ingredients:</h4>
+        <ul>
+
+          <%let ingredientsString = Messages[i].ingredients %>
+          <%let ingredientsString2 = ingredientsString.toString() %>
+          <%let ingredientsArray = ingredientsString2.split(',') %>
+          <%ingredientsArray.forEach(function(element){ %>
+          <li>
+            <%=element %>
+          </li>
+          <% }) %>
+  </ul>
+
+    <h4>Directions:</h4>
+    <p>
+      <%=Messages[i].directions %>
+    </p>
+
+
+
+      </div>
+
+
+        <nav>
+            <a href="/sessions">Back to Home Page</a>
+        </nav>
+    </body>
+</html>

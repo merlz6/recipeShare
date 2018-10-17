@@ -28,6 +28,16 @@ sessions.get('/', (req, res) => {
 
 })
 
+sessions.get('/randomRecipe', (req, res) => {
+  Message.find({}, (error, Messages) => {
+    res.render('./app/randomShow.ejs', {
+      Messages: Messages
+    })
+  })
+
+})
+
+
 sessions.get('/new', (req, res) => {
   res.render('sessions/new.ejs')
 })
@@ -77,6 +87,8 @@ sessions.put('/:id', (req, res) => {
   })
 
 })
+
+
 
 
 sessions.get('/:id/edit', (req, res) => {

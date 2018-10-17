@@ -1,6 +1,7 @@
 body {
   background-image:url('https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&h=350');
   background-size: cover;
+  text-align: center;
 }
 
 
@@ -17,8 +18,9 @@ header {
   margin-top: 0;
   padding-top: 235px;
   margin-right: 35px;
+  margin-left: 325px;
   font-size: 60px;
-
+  border-bottom: 4px solid #D80032;
   font-weight: 700;
 }
 
@@ -83,12 +85,27 @@ font-family: 'Playball', cursive;
   width:225px;
 }
 
+.randomHeader {
+  color:black;
+  font-size:28px;
+}
+
+
 
 
 a {
   color: #D80032;
   text-decoration: underline;
 }
+
+.random {
+  font-size:22px;
+  font-weight: 650;
+  color:black;
+}
+
+
+
 .adder {
   text-align: center;
 }
